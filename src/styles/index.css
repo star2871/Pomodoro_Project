@@ -1,0 +1,99 @@
+@import "tailwindcss";
+
+@theme {
+  --color-primary: #5B6EE1;
+  --color-primary-container: #E8EAFF;
+  --color-secondary: #2F9E8F;
+  --color-secondary-container: #DDF7F2;
+  --color-tertiary: #A060C8;
+  --color-background: #F7F8FC;
+  --color-surface: #FFFFFF;
+  --color-surface-variant: #EEF1F7;
+  --color-on-surface: #1F2937;
+  --color-on-surface-variant: #6B7280;
+  --color-warning: #F59E0B;
+  --color-error: #EF4444;
+
+  --radius-card: 28px;
+  --radius-button: 16px;
+  --radius-chip: 999px;
+
+  --font-sans: 'Pretendard', 'Noto Sans KR', 'Inter', system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+/* Material Symbols Rounded Icons styling */
+.material-symbols-rounded {
+  font-family: 'Material Symbols Rounded';
+  font-weight: normal;
+  font-style: normal;
+  font-size: 24px;
+  line-height: 1;
+  letter-spacing: normal;
+  text-transform: none;
+  display: inline-block;
+  white-space: nowrap;
+  word-wrap: normal;
+  direction: ltr;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+  font-feature-settings: 'liga';
+  user-select: none;
+}
+
+/* Scrollbar customization for a premium look */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #94a3b8;
+}
+
+/* App transition and state styles */
+body {
+  background-color: #F7F8FC;
+  color: #1F2937;
+  font-family: 'Pretendard', 'Noto Sans KR', 'Inter', system-ui, -apple-system, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+/* Micro-animations and active transitions */
+.fade-in {
+  animation: fadeIn 0.3s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Ring scale animation for completion states */
+@keyframes ringPulse {
+  0%, 100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(1.02);
+    opacity: 0.9;
+  }
+}
+
+.animate-pulse-ring {
+  animation: ringPulse 2s ease-in-out infinite;
+}
